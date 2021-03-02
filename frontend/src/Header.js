@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
+import  logo from './kafein.png';
 
 export default class Header extends Component {
     render() {
         return (
             <div className="container">
                 <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                    <Link to='/' className="navbar-brand">Demo</Link>
+                    <Link to='/' className="navbar-brand"><img src={logo} alt="logo" className="logo"/></Link>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav mr-auto">
                             <li className="nav-item">

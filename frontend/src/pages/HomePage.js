@@ -5,8 +5,8 @@ class HomePage extends React.Component {
   
     render() {
         return (
-            <div>
-                Ana sayfa
+            <div className="container">
+                <h4>Demo projesidir</h4>
             </div>
         );
     }
