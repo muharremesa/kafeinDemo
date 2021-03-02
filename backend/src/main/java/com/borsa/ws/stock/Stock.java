@@ -22,7 +22,7 @@ public class Stock {
 
     @NotNull
     @Column(unique = true)
-    @Size(min = 3, max = 3)
+    @Size(min = 3, max = 6)
     private String code;
 
     private double price;

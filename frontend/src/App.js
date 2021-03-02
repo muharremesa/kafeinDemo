@@ -12,7 +12,6 @@ import StockUpdate from './pages/StockUpdate';
 
 function App() {
   return (
-    //<Route path="/asdasd/:userid" component={}/>
     <div>
       <HashRouter>
         <Header />

@@ -21,10 +21,11 @@ public class WsApplication {
     @Bean
     CommandLineRunner createInitialUsers(UserService userService) {
         return (args) -> {
-            for (int i = 1; i <= 10; i++) {
+            for (int i = 11; i <= 20; i++) {
                 User user = new User();
                 user.setName("user"+i);
-                user.setSurname("P4ssword");
+                user.setSurname("surname"+i);
+                user.setPassword("P4ssword");
                 user.setDisplayName("display"+i);
                 user.setEmail("email"+i+"@gmail.com");
                 user.setId(i);
@@ -37,7 +38,7 @@ public class WsApplication {
     @Bean
     CommandLineRunner createInitialStocks(StockService stockService) {
         return (args) -> {
-            for (int i = 1; i <= 10; i++) {
+            for (int i = 11; i <= 20; i++) {
                 Stock stock = new Stock();
                 stock.setId(i);
                 stock.setName("Stock"+i);
