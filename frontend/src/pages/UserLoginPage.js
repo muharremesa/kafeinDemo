@@ -24,14 +24,12 @@ class UserLoginPage extends React.Component {
             parolatekrar: event.target.value
         });
     };
-    onClickGiris = event => {// Kanka bura çalışmıyor gibi
+    onClickGiris = event => {
         console.log('denemnes');
         event.preventDefault();
         const body = {
             kullanıcı: this.state.kullanıcı,
             parola: this.state.parola,
-            parolatekrar: this.state.parolatekrar,
-
         };
         console.log(body);
         axios.post('/api/1.0/users', body);
@@ -41,17 +39,17 @@ class UserLoginPage extends React.Component {
             <form>
                 <div className="container">
                     <div className="row">
-                        <div className="col-lg-12">
+                        <div className="col-sm-8">
                             <h1>Login Ekranı</h1>
-                            <label>Kullanıcı Adı</label>
+                            <label class="col-sm-2 col-form-label">Kullanıcı Adı</label>
                             <input onChange={this.onChangeKullanıcı} />
                         </div>
-                        <div className="col-lg-12">
-                            <label>Parola</label>
+                        <div className="col-sm-8">
+                            <label class="col-sm-2 col-form-label">Parola</label>
                             <input type="password" onChange={this.onChangeParola} />
                         </div>
-                        <div className="col-lg-12">
-                            <button className="btn btn-primary" onClick={this.onClickGiris}> Giriş </button>
+                        <div className="col-sm-8">
+                            <button className="btn btn-primary"  onClick={this.onClickGiris}> Giriş </button>
                         </div>
                     </div>
                 </div>

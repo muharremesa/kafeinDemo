@@ -44,23 +44,23 @@ class UserSingupPage extends React.Component {
                     <div className="row">
                         <div className="col-lg-12">
                             <h1>Kullanıcı Kayıt</h1>
-                            <label>Kullanıcı Adı</label>
+                            <label  class="col-sm-2 col-form-label">Kullanıcı Adı</label>
                             <input name="name" onChange={this.onChange} />
                         </div>
                         <div className="col-lg-12">
-                            <label>Kullanıcı Soyadı</label>
+                            <label  class="col-sm-2 col-form-label">Kullanıcı Soyadı</label>
                             <input name="surname" onChange={this.onChange} />
                         </div>
                         <div className="col-lg-12">
-                            <label>Kullanıcı Takma Adı</label>
+                            <label class="col-sm-2 col-form-label">Kullanıcı Takma Adı</label>
                             <input name="displayName" onChange={this.onChange} />
                         </div>
                         <div className="col-lg-12">
-                            <label>Kullanıcı Email</label>
+                            <label  class="col-sm-2 col-form-label">Kullanıcı Email</label>
                             <input name="email" onChange={this.onChange} />
                         </div>
                         <div className="col-lg-12">
-                            <label>Parola</label>
+                            <label class="col-sm-2 col-form-label">Parola</label>
                             <input name="password" type="password" onChange={this.onChange} />
                         </div>
                         <div className="col-lg-12">
