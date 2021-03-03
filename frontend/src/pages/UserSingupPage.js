@@ -64,7 +64,7 @@ class UserSingupPage extends React.Component {
                             <input name="password" type="password" onChange={this.onChange} />
                         </div>
                         <div className="col-lg-12">
-                            <button className="btn btn-primary" onClick={this.onClick}> Oluştur </button>
+                            <button className="btn btn-primary"  onClick={this.onClick}> Oluştur </button>
                         </div>
                     </div>
                 </div>

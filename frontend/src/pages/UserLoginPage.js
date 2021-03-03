@@ -4,12 +4,31 @@ import axios from 'axios'
 class UserLoginPage extends React.Component {
 
     state = {
-        kullanıcı: null,
-        parola: null,
-        parolatekrar: null
+        user: null,
+        password: null,
+        
     };
-
-    onChangeKullanıcı = event => {
+    onChange=event=> {
+        const {name,value}=event.target;
+        this.setState({
+            [name]:value,
+        })
+    }
+    onClick=event=>{
+        event.preventDefault();
+        const body={
+            user:this.state.user,
+            password:this.state.password
+        };
+        axios.post('/api/1.0/user', body).then(res => {
+            if (res.status === 200) {
+                alert('Kullanıcı başarılı bir şekilde kaydedildi.');
+            } else {
+                alert('Hata Oluştu');
+            }
+        });
+    };
+    /*onChangeKullanıcı = event => {
         this.setState({
             kullanıcı: event.target.value
         });
@@ -34,6 +53,7 @@ class UserLoginPage extends React.Component {
         console.log(body);
         axios.post('/api/1.0/users', body);
     };
+    */
     render() {
         return (
             <form>
@@ -42,14 +62,14 @@ class UserLoginPage extends React.Component {
                         <div className="col-sm-8">
                             <h1>Login Ekranı</h1>
                             <label class="col-sm-2 col-form-label">Kullanıcı Adı</label>
-                            <input onChange={this.onChangeKullanıcı} />
+                            <input name="user" onChange={this.onChange} />
                         </div>
                         <div className="col-sm-8">
                             <label class="col-sm-2 col-form-label">Parola</label>
-                            <input type="password" onChange={this.onChangeParola} />
+                            <input name="password" type="password" onChange={this.onChangeParola} />
                         </div>
                         <div className="col-sm-8">
-                            <button className="btn btn-primary"  onClick={this.onClickGiris}> Giriş </button>
+                            <button className="btn btn-primary"  onClick={this.onClick}> Giriş </button>
                         </div>
                     </div>
                 </div>
